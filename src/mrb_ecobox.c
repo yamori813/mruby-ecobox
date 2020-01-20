@@ -90,7 +90,6 @@ static mrb_value mrb_ecobox_get(mrb_state *mrb, mrb_value self)
 static mrb_value mrb_ecobox_range(mrb_state *mrb, mrb_value self)
 {
   mrb_ecobox_data *data = DATA_PTR(self);
-// USBControlTransfer(device, HOST_TO_DEVICE|REQUEST_TYPE_VENDOR|RECIPIENT_ENDPOINT, 0x10, value, 0, 0, 0);
   mrb_int value;
 
   mrb_get_args(mrb, "i", &value);

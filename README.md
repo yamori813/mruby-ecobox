@@ -29,6 +29,4 @@ under the BSD License:
 
 ## Todo
 
-- error handling
-- long data support
-- receive support
+- cleanup
