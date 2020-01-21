@@ -20,7 +20,11 @@ end
 t = Ecobox.new
 t.open
 
-p t.get(1)
+while 1 do
+  if t.get(1) == 0 then
+    p "I'm hier."
+  end
+end
 ```
 
 ## License
