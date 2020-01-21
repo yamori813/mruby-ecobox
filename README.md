@@ -4,6 +4,7 @@ Ecobox class
 This is I-O DATA ECOBOX-NET USB module mrbgem.
 
 get(timeout) - get event with timeout(millseconds). 0 is no timeout.
+               return value is 0 is sccsess. -7 is timeout.
 range(value) - set check range by ECOBOX_RANGE_30CM, 60CM, 90CM, 120CM.
 
 ## install by mrbgems
