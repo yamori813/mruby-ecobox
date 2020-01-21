@@ -91,12 +91,13 @@ static mrb_value mrb_ecobox_range(mrb_state *mrb, mrb_value self)
 {
   mrb_ecobox_data *data = DATA_PTR(self);
   mrb_int value;
+  int err;
 
   mrb_get_args(mrb, "i", &value);
 
-  libusb_control_transfer(data->devh, HOST_TO_DEVICE|REQUEST_TYPE_VENDOR|RECIPIENT_ENDPOINT, 0x10, value, 0, NULL, 0, 0);
+  err = libusb_control_transfer(data->devh, HOST_TO_DEVICE|REQUEST_TYPE_VENDOR|RECIPIENT_ENDPOINT, 0x10, value, 0, NULL, 0, 0);
 
-  return mrb_fixnum_value(1);
+  return mrb_fixnum_value(err);
 }
 
 void mrb_mruby_ecobox_gem_init(mrb_state *mrb)
